@@ -1,23 +1,27 @@
 #include<stdio.h>
 
+
 int main(){
     int i,n;
     printf("Veuillez entrer le nombre des elements:");
-    scanf("%d", &n);  
+    scanf("%d",&n);
+    int Entier[n];
+    for(i=0;i<n;i++){
+        printf("Veuillez entrer la valeur de num %d :", i+1);
+        scanf("%d",&Entier[i]);
+    }
+    int Copie[n];
+    for(i=0;i<n;i++){
+        Copie[i] = Entier[i];
+        printf("%d = %d \n",Copie[i],Entier[i]);
+        
+    }
     
-    int Entier1[n];
-    int Entier2[n];
-    for(i=0;i<n;i++){
-         printf("Veuillez entrer la valeur de l'element num %d :",i+1);
-         scanf("%d",&Entier1[i]);
-    }
-    printf("Les valeurs du nouveau tableau sont:\n");
-    for(i=0;i<n;i++){
-        Entier2[i] = Entier1[i];
-        printf("%d = %d \n",Entier2[i],Entier1[i]);
-    }
-
-
-
+    
+    
+    
+    
+    
+    
     return 0;
 }
