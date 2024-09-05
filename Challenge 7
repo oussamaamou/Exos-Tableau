@@ -9,16 +9,17 @@ int main(){
         printf("Veuillez entrer l'element num %d :", i+1);
         scanf("%d",&Entier[i]);
     }
-    Echg = 0;
-    for(i=0;i<n;i++){
-        for(j=1;j<n;j++){
-            if (Entier[i]<Entier[j])
-                 Echg = Entier[j];
-                 Entier[j] = Entier[i];
-                 Entier[i] = Echg;
 
+    for(i=0;i<n-1;i++){
+        for(j=i+1;j<n;j++){
+            if (Entier[i]>Entier[j]){
+                 Echg = Entier[i];
+                 Entier[i] = Entier[j];
+                 Entier[j] = Echg;
+            }
         }
     }
+     
     printf("\tLes elements du tableau en ordre croissant:\n");
     for(i=0;i<n;i++)
            printf("%d \n",Entier[i]);
